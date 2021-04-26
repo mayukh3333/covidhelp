@@ -64,7 +64,7 @@ def fetch_data(city):
 def find():
     city = request.get_data(as_text = True)
     data = fetch_data(city)
-    return render_template('simple.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
+    return render_template('data.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT',5000))
