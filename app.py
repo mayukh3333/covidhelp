@@ -64,7 +64,7 @@ def fetch_data(city):
 @app.route('/find',methods=['GET','POST'])
 def find():
     city = request.get_data(as_text = True)
-    data = fetch_data(city)
+    df = fetch_data(city)
     return render_template('data.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 if __name__ == "__main__":
