@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Covid Help</title>
+    
+
+</head>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+</style>
+<body>
+    <div class="login">
+        <h1>Covid Help</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('data')}}" method="post">
+            <div class="form-control">
+                <input type="text" name="news" placeholder="Enter City" required="required" align = 'middle'/>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Enter</button>
+            </div>
+        </form>
+
+        <br>
+        <br>
+        <div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            
+            <p align = 'center'><b>What do I do?</b><br> Enter a URL in the box above, the bot will load the article, extract the visible text, and use different models to make a prediction of whether the article is fake or real. This may take several seconds because
+                the URL you enter has to be loaded and processed.
+            </p>
+            <p align = 'center'><b>Any article I want?</b> <br> The model has been trained only on political news. Anything outside of that domain is unlikely to produce credible results. Bot will not load articles from google.com because of their robots.txt policy.
+            </p>
+           
+        </div>
+
+       
+        <br>
+        <br>
+        <br>
+        <br>
+        <div><p>&#169; 2020 Mayukh Dewan </p></div>
+
+    </div>
+
+
+</body>
+
+</html>
